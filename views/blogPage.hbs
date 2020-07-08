@@ -1,0 +1,31 @@
+<section id="blog-page" class="container">
+    <div class="blog-post-container">
+        {{#if session.user}}
+            <a class="blog-post-new-link" href="/blog/new">+ New Post</a>
+        {{/if}}
+        {{#each posts}}
+            <article class="blog-post">
+                <div class="blog-post-heading">
+                    <h1 class="blog-post-title">{{ this.title }}</h1>
+                    <small clas="blog-post-date">{{this.created_at}}</small>
+                </div>
+                <div class="blog-post-body">
+                    <p class="blog-post-description">{{ this.description }}</p>
+                </div>
+                <div class="blog-post-footer">
+                    <a class="blog-post-link" href="/blog/post/{{ this.id }}">Read</a>
+                    <small class="blog-post-author">{{ this.first_name }} {{ this.last_name }}</small>
+                </div>
+            </article>
+        {{/each}}
+        <nav class="blog-navigation">
+            {{#if (compare page '>' 1)}}
+                <a class="blog-navigation-link" href="/blog?page={{previousPage}}&perPage={{perPage}}"><i class="fas fa-arrow-left"></i> Prev</a>
+            {{/if}}
+            <span></span>
+            {{#if (compare page '<' totalPages)}}
+                <a class="blog-navigation-link" href="/blog?page={{nextPage}}&perPage={{perPage}}">Next <i class="fas fa-arrow-right"></i></a>
+            {{/if}}
+        </nav>
+    </div>
+</section>

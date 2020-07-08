@@ -1,0 +1,10 @@
+<form id="{{ id }}" class="form" action="{{ action }}" method="POST">
+        <h2 class="text-center form-heading">{{ heading }}</h2>
+        {{#if error}}
+            <span class="error-message">{{ error.message }}</span>
+        {{/if}}
+        <input name="title" class="form-input" type="text" placeholder="Title" value="{{ title }}" required>
+        <input name="description" class="form-input" type="text" placeholder="Description" value="{{ description }}" required>
+        <textarea rows="20" cols="10" name="content" class="form-textarea" placeholder="Content" required>{{content}}</textarea>
+        <button class="form-button" type="submit">{{ button }}</button>
+</form>

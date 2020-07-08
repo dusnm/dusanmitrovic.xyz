@@ -1,0 +1,26 @@
+<header>
+    <nav class="navbar-nav">
+        <div class="navbar-logo-area">
+            <h1 class="navbar-logo-text"><span class="navbar-logo">DM</span> Dušan Mitrović</h1>
+        </div>
+        <div class="navbar-nav-area">
+            <ul class="navbar">
+                <li class="navbar-item">
+                    <a class="navbar-link" href="/">Home</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="navbar-link" href="/blog">Blog</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="navbar-link" href="/contact">Contact</a>
+                </li>
+                {{#if session.user}}
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="/admin/logout">Logout</a>
+                    </li>
+                {{/if}}
+            </ul>
+        <div class="navbar-burger"></div>
+        </div>
+    </nav>
+</header>

@@ -1,0 +1,14 @@
+<form id="{{ id }}" class="form" action="{{ action }}" method="POST">
+        <h2 class="text-center form-heading">Contact</h2>
+        {{#if error}}
+            <span class="error-message">{{ error.message }}</span>
+        {{/if}}
+        {{#if success}}
+            <span class="success-message">{{ success.message }}</span>
+        {{/if}}
+        <input name="name" class="form-input" type="text" placeholder="Your name" value="{{ name }}" required>
+        <input name="email" class="form-input" type="email" placeholder="Your email address" value="{{ email }}" required>
+        <input name="subject" class="form-input" type="text" placeholder="Subject" value="{{ subject }}" required>
+        <textarea rows="20" cols="10" name="message" class="form-textarea" placeholder="Your message" required>{{message}}</textarea>
+        <button class="form-button" type="submit">Send</button>
+</form>

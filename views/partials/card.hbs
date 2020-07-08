@@ -1,0 +1,24 @@
+<div class="card">
+    {{#if image}}
+        <div class="card-image-container">
+            {{#if image.rounded}}
+                <img draggable="false" class="card-image rounded" src="{{ image.url }}" alt="{{ image.alt }}">
+            {{else}}
+                <img draggable="false" class="card-image" src="{{ image.url }}" alt="{{ image.alt }}">
+            {{/if}}
+        </div>
+    {{/if}}
+    <div class="card-body">
+        {{#if title}}
+            <h1 class="card-title">{{ title }}</h1>
+        {{/if}}
+        <p class="card-text">{{ content }}</p>
+        {{#if links}}
+            <div class="card-links">
+                {{#each links}}
+                    <a class="card-link" target="_blank" href="{{ this.url }}"><i class="{{ this.icon }}"></i> {{this.text}}</a>
+                {{/each}}
+            </div>
+        {{/if}}
+    </div>
+</div>

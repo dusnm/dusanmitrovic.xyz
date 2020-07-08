@@ -1,0 +1,11 @@
+<section id="login" class="container">
+    <form id="login-form" class="form" action="/admin/login" method="POST">
+        <h2 class="text-center form-heading">{{ title }}</h2>
+        {{#if error}}
+            <span class="error-message">{{ error.message }}</span>
+        {{/if}}
+        <input id="login-email" name="email" class="form-input" type="email" placeholder="Email address" required>
+        <input id="login-password" name="password" class="form-input" type="password" placeholder="Password" required>
+        <button id="login-submit" class="form-button" type="submit">Log In</button>
+    </form>
+</section>

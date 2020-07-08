@@ -1,0 +1,13 @@
+<section id="blog-post" class="container">
+    <article class="post-content">
+        {{{ content }}}
+    </article>
+    {{#if session.user}}
+        <div class="post-actions">
+            <a class="post-action-edit" href="/blog/edit/{{id}}"><i class="fas fa-edit"></i> Edit</a>
+            <form id="delete-post-form" class="post-action" action="/blog/post/{{id}}?_method=DELETE" method="POST">
+                <button type="submit" class="post-action-delete"><i class="fas fa-trash"></i> Delete</button>
+            </form>
+        </div>
+    {{/if}}
+</section>
