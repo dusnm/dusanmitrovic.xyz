@@ -1,9 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {{#if openGraph}}
+        <meta property="og:title" content="{{ openGraph.title }}">
+        <meta property="og:type" content="{{ openGraph.type }}">
+        <meta property="og:url" content="{{ openGraph.url }}">
+        {{#if openGraph.image}}
+            <meta property="og:image" content="{{ openGraph.image }}">
+        {{#else}}
+            <meta property="og:image" content="/static/images/me_alternate.jpg">
+        {{/if}}
+        <meta property="og:description" content="{{ openGraph.description }}">
+    {{/if}}
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="/static/css/style.css">
     <!-- Navbar Stylesheet -->

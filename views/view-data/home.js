@@ -6,6 +6,12 @@ module.exports = {
         '/static/fontawesome-free/css/fontawesome.min.css'
     ],
     js: ['/static/js/ui-functions.js'],
+    openGraph: {
+        title: 'Home',
+        type: 'website',
+        url: 'https://dusanmitrovic.xyz',
+        description: `I'm a network engineering student and a professional software developer and a gigantic GNU/Linux enthusiast.`
+    },
     cards: [
         {
             title: 'Dušan Mitrović',
