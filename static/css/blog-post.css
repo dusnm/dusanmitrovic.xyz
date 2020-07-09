@@ -78,13 +78,18 @@
 
 .post-content h1 {
     font-size: 2rem;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 
 .post-content p {
     font-size: 1.2rem;
-    margin-bottom: 1em;
+    margin: 0.5em 0;
     text-align: justify;
+}
+
+.post-content ul,
+ol {
+    list-style-position: inside;
 }
 
 .post-content img {
