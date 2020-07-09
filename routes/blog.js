@@ -20,7 +20,6 @@ router.get('/new', authorizationMiddleware, (req, res) => {
             id: 'publish-post',
             action: `/blog`,
             heading: 'Publish Post',
-            error: {},
             title: '',
             description: '',
             content: '',

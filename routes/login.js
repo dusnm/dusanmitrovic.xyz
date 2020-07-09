@@ -6,6 +6,7 @@
  */
 const express = require('express');
 const { body, validationResult } = require('express-validator');
+const authorizationMiddleware = require('../middleware/auth');
 const LoginService = require('../services/login-service');
 
 const router = express.Router();
@@ -69,7 +70,7 @@ router.post(
     }
 );
 
-router.get('/logout', (req, res) => {
+router.get('/logout', authorizationMiddleware, (req, res) => {
     req.session.destroy(err => {
         if (err) {
             console.error(err);
