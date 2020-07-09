@@ -34,7 +34,7 @@ class PostService {
      *
      * @returns {Promise<PaginatedPosts>}
      */
-    static async getPaginated(page = 1, perPage = 5) {
+    static async getPaginated(page = 1, perPage = 4) {
         const postsCount = await Post.query().count('*', { as: 'count' });
         const posts = await Post.query()
             .select(

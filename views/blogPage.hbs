@@ -20,11 +20,11 @@
         {{/each}}
         <nav class="blog-navigation">
             {{#if (compare page '>' 1)}}
-                <a class="blog-navigation-link" href="/blog?page={{previousPage}}&perPage={{perPage}}"><i class="fas fa-arrow-left"></i> Prev</a>
+                <a class="blog-navigation-link" href="/blog?page={{previousPage}}&perPage={{perPage}}">&lt; Previous</a>
             {{/if}}
             <span></span>
             {{#if (compare page '<' totalPages)}}
-                <a class="blog-navigation-link" href="/blog?page={{nextPage}}&perPage={{perPage}}">Next <i class="fas fa-arrow-right"></i></a>
+                <a class="blog-navigation-link" href="/blog?page={{nextPage}}&perPage={{perPage}}">Next &gt;</a>
             {{/if}}
         </nav>
     </div>

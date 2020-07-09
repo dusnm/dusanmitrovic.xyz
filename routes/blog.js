@@ -98,7 +98,7 @@ router.get('/edit/:id', authorizationMiddleware, async (req, res) => {
 router.get('/', async (req, res) => {
     try {
         const page = req.query.page ? req.query.page : 1;
-        const perPage = req.query.perPage ? req.query.perPage : 5;
+        const perPage = req.query.perPage ? req.query.perPage : 4;
 
         const paginatedPosts = await PostService.getPaginated(page, perPage);
 
