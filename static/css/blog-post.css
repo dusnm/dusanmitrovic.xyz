@@ -152,6 +152,6 @@ ol {
     }
 
     .post-content pre {
-        white-space: pre-wrap;
+        overflow-x: auto;
     }
 }
