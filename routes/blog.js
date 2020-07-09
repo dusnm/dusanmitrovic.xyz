@@ -41,7 +41,7 @@ router.get('/post/:id', async (req, res) => {
         }
 
         // Font awesome is not needed unless I'm logged in.
-        const css = ['/static/css/blog-post.css'];
+        const css = ['/static/css/prism.css', '/static/css/blog-post.css'];
 
         if (undefined !== req.session.user) {
             css.push('/static/fontawesome-free/css/solid.min.css');
@@ -51,7 +51,7 @@ router.get('/post/:id', async (req, res) => {
         return res.render('blogPost', {
             title: post.title,
             css,
-            js: ['/static/js/ui-functions.js'],
+            js: ['/static/js/prism.js','/static/js/ui-functions.js'],
             id: post.id,
             content: markdown2Html(post.content),
             openGraph: {

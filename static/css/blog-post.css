@@ -97,13 +97,6 @@ ol {
     height: auto;
 }
 
-.post-content code {
-    display: inline-block;
-    background: var(--primary-bg);
-    padding: 1em;
-    margin-bottom: 1em;
-}
-
 .post-actions {
     display: flex;
     align-items: center;
