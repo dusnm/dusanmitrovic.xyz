@@ -9,7 +9,7 @@ module.exports = {
     openGraph: {
         title: 'Home',
         type: 'website',
-        url: 'https://dusanmitrovic.xyz',
+        url: process.env.HOST,
         description: `I'm a network engineering student and a professional software developer and a gigantic GNU/Linux enthusiast.`
     },
     cards: [

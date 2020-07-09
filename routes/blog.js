@@ -37,7 +37,6 @@ router.get('/post/:id', async (req, res) => {
         if (undefined === post) {
             return res.render('404', {
                 title: '404',
-                css: [],
                 js: ['/static/js/ui-functions.js']
             });
         }
@@ -55,7 +54,13 @@ router.get('/post/:id', async (req, res) => {
             css,
             js: ['/static/js/ui-functions.js'],
             id: post.id,
-            content: markdown2Html(post.content)
+            content: markdown2Html(post.content),
+            openGraph: {
+                title: post.title,
+                type: 'article',
+                url: `${process.env.HOST}/blog/post/${post.id}`,
+                description: post.description
+            }
         });
     } catch (error) {
         console.error(error);
