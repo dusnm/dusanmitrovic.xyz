@@ -173,6 +173,7 @@ router.post(
 
 router.put(
     '/:id',
+    authorizationMiddleware,
     [
         body('title')
             .notEmpty()
@@ -182,7 +183,6 @@ router.put(
             .isLength({ max: 300 }),
         body('content').notEmpty()
     ],
-    authorizationMiddleware,
     async (req, res) => {
         try {
             const errors = validationResult(req);
