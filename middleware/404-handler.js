@@ -5,7 +5,10 @@
  * @summary A middleware that handles all 404 errors
  */
 const notFoundHandler = (req, res, next) => {
-    res.status(404).render('404');
+    res.status(404).render('404', {
+        title: 'Page Not Found',
+        js: ['/static/js/ui-functions.js']
+    });
 };
 
 module.exports = notFoundHandler;
