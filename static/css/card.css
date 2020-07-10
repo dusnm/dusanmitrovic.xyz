@@ -43,10 +43,6 @@
         flex-direction: column;
     }
 
-    .container {
-        width: 90%;
-    }
-
     .card-image-container {
         width: 100%;
     }
