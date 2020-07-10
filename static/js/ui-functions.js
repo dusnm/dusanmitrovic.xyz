@@ -28,11 +28,21 @@ const determineActiveNavigation = () => {
     const currentPath = window.location.pathname;
 
     const navigationLinks = document.querySelectorAll('.navbar-link');
-    navigationLinks.forEach(navigationLink => {
+
+    for (navigationLink of navigationLinks) {
         const navigationLinkPath = navigationLink.getAttribute('href');
 
-        if (currentPath === navigationLinkPath) {
+        if (navigationLinkPath === '/' && currentPath === '/') {
             navigationLink.classList.add('active');
+            return;
         }
-    });
+
+        if (
+            navigationLinkPath !== '/' &&
+            currentPath.includes(navigationLinkPath)
+        ) {
+            navigationLink.classList.add('active');
+            return;
+        }
+    }
 };
