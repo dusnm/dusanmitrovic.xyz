@@ -1,0 +1,41 @@
+.form {
+    display: flex;
+    padding: 1em;
+    background: var(--secondary-bg);
+    flex-direction: column;
+}
+
+.form-heading {
+    margin: 1em 0;
+}
+
+.form-input {
+    padding: 1em 2em;
+    margin-bottom: 1em;
+    background: var(--primary-bg);
+    border-style: none;
+    font-size: 1rem;
+}
+
+.form-textarea {
+    resize: none;
+    border-style: none;
+    background-color: var(--primary-bg);
+    padding: 1em;
+    font-size: 1rem;
+    margin-bottom: 1em;
+}
+
+.form-button {
+    width: 20%;
+    padding: 1em 2em;
+    border-style: none;
+    background: var(--primary-bg);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+    .form-button {
+        width: 100%;
+    }
+}

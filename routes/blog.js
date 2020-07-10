@@ -15,7 +15,6 @@ const router = express.Router();
 router.get('/new', authorizationMiddleware, (req, res) => {
     return res.render('newPost', {
         title: 'New Post',
-        js: ['/static/js/ui-functions.js'],
         form: {
             id: 'publish-post',
             action: `/blog`,
@@ -35,8 +34,7 @@ router.get('/post/:id', async (req, res) => {
 
         if (undefined === post) {
             return res.render('404', {
-                title: '404',
-                js: ['/static/js/ui-functions.js']
+                title: 'Page Not Found'
             });
         }
 
@@ -51,7 +49,7 @@ router.get('/post/:id', async (req, res) => {
         return res.render('blogPost', {
             title: post.title,
             css,
-            js: ['/static/js/prism.js','/static/js/ui-functions.js'],
+            js: ['/static/js/prism.js'],
             id: post.id,
             content: markdown2Html(post.content),
             openGraph: {
@@ -74,14 +72,12 @@ router.get('/edit/:id', authorizationMiddleware, async (req, res) => {
 
     if (undefined === post) {
         return res.render('404', {
-            title: '404',
-            js: ['/static/js/ui-functions.js']
+            title: 'Page Not Found'
         });
     }
 
     return res.render('editPost', {
         title: 'Edit Post',
-        js: ['/static/js/ui-functions.js'],
         form: {
             id: 'edit-post',
             action: `/blog/${id}?_method=PUT`,
@@ -109,7 +105,6 @@ router.get('/', async (req, res) => {
         return res.render('blogPage', {
             title: 'Blog',
             css: ['/static/css/blog-post.css'],
-            js: ['/static/js/ui-functions.js'],
             posts: paginatedPosts.posts,
             totalPages: paginatedPosts.totalPages,
             page,
@@ -145,7 +140,6 @@ router.post(
 
                 return res.status(422).render('newPost', {
                     title: 'New Post',
-                    js: ['/static/js/ui-functions.js'],
                     form: {
                         id: 'publish-post',
                         action: `/blog`,
@@ -195,7 +189,6 @@ router.put(
 
                 return res.status(422).render('editPost', {
                     title: 'Edit Post',
-                    js: ['/static/js/ui-functions.js'],
                     form: {
                         id: 'edit-post',
                         action: `/blog/${id}?_method=PUT`,

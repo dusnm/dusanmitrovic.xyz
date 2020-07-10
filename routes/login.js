@@ -17,8 +17,7 @@ router.get('/login', (req, res) => {
     }
 
     return res.render('login', {
-        title: 'Login',
-        js: ['/static/js/ui-functions.js']
+        title: 'Login'
     });
 });
 
@@ -34,7 +33,6 @@ router.post(
 
                 return res.status(422).render('login', {
                     title: 'Login',
-                    js: ['/static/js/ui-functions.js'],
                     error: {
                         message: `${errorsArray[0].msg} ${errorsArray[0].param}`
                     }
@@ -48,7 +46,6 @@ router.post(
             if (!user) {
                 return res.status(401).render('login', {
                     title: 'Login',
-                    js: ['/static/js/ui-functions.js'],
                     error: {
                         message: 'Wrong email or password.'
                     }

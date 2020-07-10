@@ -13,7 +13,6 @@ const router = express.Router();
 router.get('/', (req, res) => {
     return res.render('contact', {
         title: 'Contact',
-        js: ['/static/js/ui-functions.js'],
         form: {
             id: 'contact-form',
             action: '/contact',
@@ -51,7 +50,6 @@ router.post(
 
             return res.status(422).render('contact', {
                 title: 'Contact',
-                js: ['/static/js/ui-functions.js'],
                 form: {
                     id: 'contact-form',
                     action: '/contact',
@@ -87,7 +85,6 @@ router.post(
 
         return res.render('contact', {
             title: 'Contact',
-            js: ['/static/js/ui-functions.js'],
             form: {
                 id: 'contact-form',
                 action: '/contact',

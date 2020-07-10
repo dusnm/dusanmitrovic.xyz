@@ -5,7 +5,6 @@ module.exports = {
         '/static/fontawesome-free/css/solid.min.css',
         '/static/fontawesome-free/css/fontawesome.min.css'
     ],
-    js: ['/static/js/ui-functions.js'],
     openGraph: {
         title: 'Home',
         type: 'website',

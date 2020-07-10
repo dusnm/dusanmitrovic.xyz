@@ -15,10 +15,14 @@
         {{/if}}
         <meta property="og:description" content="{{ openGraph.description }}">
     {{/if}}
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="/static/css/style.css">
     <!-- Navbar Stylesheet -->
     <link rel="stylesheet" href="/static/css/navbar.css">
+    <!-- Card Stylesheet -->
+    <link rel="stylesheet" href="/static/css/card.css">
+    <!-- Form Stylesheet -->
+    <link rel="stylesheet" href="/static/css/form.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/static/css/style.css">
     {{#if css}}
         {{#each css}}
             <link rel="stylesheet" href="{{this}}">
@@ -36,6 +40,8 @@
         <script src="{{this}}"></script>
         {{/each}}
     {{/if}}
+    <!-- UI Functions JS File -->
+    <script src="/static/js/ui-functions.js"></script>
     <!-- Main JS File -->
     <script src="/static/js/main.js"></script>
 </body>
