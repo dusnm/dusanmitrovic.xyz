@@ -23,6 +23,8 @@ const passSessionToHandlebars = require('./middleware/session');
 const notFoundHandler = require('./middleware/404-handler');
 const knex = require('./db/connection');
 const { Model } = require('objection');
+const https = require('https');
+const { readFileSync } = require('fs');
 
 // Defined routes
 const home = require('./routes/home');
@@ -79,4 +81,15 @@ app.get(
     notFoundHandler
 );
 
-app.listen(PORT, () => console.log(`Server listening on ${HOST}:${PORT}/`));
+const httpsOptions = {
+    key: readFileSync(process.env.SSL_PRIVATE_KEY),
+    cert: readFileSync(process.env.SSL_CERTIFICATE)
+};
+
+if ('production' === process.env.NODE_ENV) {
+    httpsOptions['ca'] = readFileSync(process.env.SSL_CERTIFICATE_AUTHORITY);
+}
+
+https
+    .createServer(httpsOptions, app)
+    .listen(PORT, () => console.log(`Server listening on ${HOST}:${PORT}`));
