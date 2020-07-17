@@ -2,13 +2,15 @@
  * @author Dusan Mitrovic <dusan@dusanmitrovic.xyz>
  * @license GPL-3.0-only https://opensource.org/licenses/GPL-3.0
  *
- * HTTP routes controlling the blog
+ * @summary HTTP routes controlling the blog
  */
 const express = require('express');
 const PostService = require('../services/post-service');
 const authorizationMiddleware = require('../middleware/auth');
 const markdown2Html = require('../utilities/markdown-2-html');
-const { body, validationResult } = require('express-validator');
+const validations = require('../validations/post-validations');
+const { validationResult } = require('express-validator');
+const capitalize = require('../utilities/capitalize');
 const moment = require('moment');
 const router = express.Router();
 
@@ -91,8 +93,16 @@ router.get('/edit/:id', authorizationMiddleware, async (req, res) => {
     });
 });
 
-router.get('/', async (req, res) => {
+router.get('/', validations.getPaginatedPosts, async (req, res) => {
     try {
+        const errors = validationResult(req);
+
+        if (!errors.isEmpty()) {
+            return res.status(404).render('404', {
+                title: 'Page Not Found'
+            });
+        }
+
         const page = req.query.page ? req.query.page : 1;
         const perPage = req.query.perPage ? req.query.perPage : 4;
 
@@ -120,15 +130,7 @@ router.get('/', async (req, res) => {
 router.post(
     '/',
     authorizationMiddleware,
-    [
-        body('title')
-            .notEmpty()
-            .isLength({ max: 100 }),
-        body('description')
-            .notEmpty()
-            .isLength({ max: 300 }),
-        body('content').notEmpty()
-    ],
+    validations.createAndUpdatePost,
     async (req, res) => {
         try {
             const errors = validationResult(req);
@@ -145,7 +147,9 @@ router.post(
                         action: `/blog`,
                         heading: 'Publish Post',
                         error: {
-                            message: `${errorsArray[0].msg} ${errorsArray[0].param}`
+                            message: `${capitalize(errorsArray[0].param)} ${
+                                errorsArray[0].msg
+                            }`
                         },
                         title,
                         description,
@@ -168,15 +172,7 @@ router.post(
 router.put(
     '/:id',
     authorizationMiddleware,
-    [
-        body('title')
-            .notEmpty()
-            .isLength({ max: 100 }),
-        body('description')
-            .notEmpty()
-            .isLength({ max: 300 }),
-        body('content').notEmpty()
-    ],
+    validations.createAndUpdatePost,
     async (req, res) => {
         try {
             const errors = validationResult(req);
@@ -194,7 +190,9 @@ router.put(
                         action: `/blog/${id}?_method=PUT`,
                         heading: 'Edit Post',
                         error: {
-                            message: `${errorsArray[0].msg} ${errorsArray[0].param}`
+                            message: `${capitalize(errorsArray[0].param)} ${
+                                errorsArray[0].msg
+                            }`
                         },
                         title,
                         description,
