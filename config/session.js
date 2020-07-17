@@ -17,7 +17,7 @@ const redisSession = {
     saveUninitialized: true,
     resave: false,
     cookie: {
-        secure: false //TODO: Set to true in production
+        secure: true    
     }
 };
 
