@@ -57,6 +57,10 @@ app.engine('hbs', expressHandlebars(handlebarsConfig));
 app.set('view engine', 'hbs');
 app.set('views', dirname(require.main.filename) + '/views/');
 
+// Set express behind proxy
+app.set('trust proxy', true);
+app.set('trust proxy', 'loopback', 'linklocal');
+
 app.use(
     express.urlencoded({
         extended: true
