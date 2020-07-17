@@ -1,0 +1,11 @@
+#!/bin/sh
+#
+# Copyright (C) 2020 Dusan Mitrovic <dusan@dusanmitrovic.xyz>
+# Licensed under the terms of the GNU GPL version 3 only
+#
+# Generate a self signed certificate for use with express for local development
+certificate_directory="./certificates"
+
+[ ! -d $certificate_directory ] && mkdir $certificate_directory
+
+openssl req -x509 -nodes -newkey rsa:4096 -keyout "$certificate_directory/private.pem" -out "$certificate_directory/certificate.pem" -days 365
