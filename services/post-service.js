@@ -21,6 +21,28 @@ class PostService {
     }
 
     /**
+     * Get X posts sorted by publishing date
+     *
+     * @param {number} numberOfPosts
+     *
+     * @returns Promise<Array<Post>>
+     */
+    static async getTopX(numberOfPosts = 3) {
+        return Post.query()
+            .select(
+                'posts.id',
+                'posts.title',
+                'posts.description',
+                'posts.created_at',
+                'user.first_name',
+                'user.last_name'
+            )
+            .leftJoinRelated('user')
+            .orderBy('created_at', 'DESC')
+            .limit(numberOfPosts);
+    }
+
+    /**
      * @typedef {Object} PaginatedPosts
      * @property {Array<Post>} posts
      * @property {number} totalPages

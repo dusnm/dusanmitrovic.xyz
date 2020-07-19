@@ -5,6 +5,15 @@
  * Main JavaScript file
  */
 window.addEventListener('DOMContentLoaded', () => {
-    navbarSlider();
-    determineActiveNavigation();
+    if ('function' === typeof navbarSlider) {
+        navbarSlider();
+    }
+
+    if ('function' === typeof determineActiveNavigation) {
+        determineActiveNavigation();
+    }
+
+    if ('function' === typeof fetchRecentGithubRepositories) {
+        fetchRecentGithubRepositories();
+    }
 });

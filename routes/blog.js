@@ -219,8 +219,7 @@ router.delete('/post/:id', authorizationMiddleware, async (req, res) => {
 
         await PostService.delete(id, user_id);
 
-        return res.redirect('/blog');
-    } catch (error) {
+        return res.redirect('/blog'); } catch (error) {
         console.error(error);
         return res.end();
     }

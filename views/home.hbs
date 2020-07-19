@@ -1,5 +1,32 @@
-<section id="content" class="container">
-    {{#each cards}}
-        {{> card title=this.title image=this.image content=this.content links=this.links }}
-    {{/each}}
+<section id="homepage" class="container">
+    <main id="homepage-content">
+        {{#each cards}}
+            {{> card title=this.title image=this.image content=this.content links=this.links }}
+        {{/each}}
+    </main>
+    <aside id="homepage-sidebar" class="sidebar">
+        <div class="sidebar-items" id="github-projects">
+            <h3 class="sidebar-items-heading">Recent projects</h3>
+        </div>
+        <div class="sidebar-items">
+            <h3 class="sidebar-items-heading">Recent posts</h3>
+            {{#if posts}}
+                {{#each posts}}
+                    <div class="sidebar-item">
+                        <a href="/blog/post/{{ this.id }}"><h3>{{ this.title }}</h3></a>
+                        <p>{{ this.description }}</p>
+                    </div>
+                {{/each}}
+            {{/if}}
+        </div>
+        <div class="sidebar-items">
+            <h3 class="sidebar-items-heading">Other links</h3>
+            <div class="sidebar-item">
+                <a href="/static/dusancv.pdf"><h3>CV</h3></a>
+            </div>
+            <div class="sidebar-item">
+                <a href="https://github.com/dusnm/dusanmitrovic.xyz" target="_blank"><h3>Website source code</h3></a>
+            </div>
+        </div>
+    </aside>
 </section>

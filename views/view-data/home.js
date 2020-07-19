@@ -3,8 +3,11 @@ module.exports = {
     css: [
         '/static/fontawesome-free/css/brands.min.css',
         '/static/fontawesome-free/css/solid.min.css',
-        '/static/fontawesome-free/css/fontawesome.min.css'
+        '/static/fontawesome-free/css/fontawesome.min.css',
+        '/static/css/three-dots.min.css',
+        '/static/css/homepage.css'
     ],
+    js: ['/static/js/github-repositories.js'],
     openGraph: {
         title: 'Home',
         type: 'website',
@@ -66,22 +69,5 @@ module.exports = {
                 }
             ]
         },
-        {
-            title: 'Other links',
-            content:
-                'If you wish to take a look at my CV or download the source code for this website, take a look at one of these links:',
-            links: [
-                {
-                    url: '/static/dusancv.pdf',
-                    icon: 'fas fa-file-pdf',
-                    text: 'Get CV'
-                },
-                {
-                    url: 'https://github.com/dusnm/dusanmitrovic.xyz',
-                    icon: 'fab fa-github',
-                    text: 'Get source'
-                }
-            ]
-        }
     ]
 };
