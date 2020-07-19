@@ -28,7 +28,6 @@
 
 .sidebar-item {
     background: var(--grey-bg);
-    margin-bottom: 1em;
     padding: 1em;
 }
 
@@ -36,6 +35,10 @@
     font-weight: bold;
     text-decoration: none;
     color: var(--secondary-fg);
+}
+
+.sidebar-item p {
+    font-size: 0.8rem;
 }
 
 @media screen and (max-width: 1000px) {
