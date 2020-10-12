@@ -4,10 +4,8 @@ module.exports = {
         '/static/fontawesome-free/css/brands.min.css',
         '/static/fontawesome-free/css/solid.min.css',
         '/static/fontawesome-free/css/fontawesome.min.css',
-        '/static/css/three-dots.min.css',
         '/static/css/homepage.css'
     ],
-    js: ['/static/js/github-repositories.js'],
     openGraph: {
         title: 'Home',
         type: 'website',
@@ -24,7 +22,8 @@ module.exports = {
             },
             content: `I'm a network engineering student and a professional software developer and a gigantic GNU/Linux enthusiast.
                 My interests are broad, anything from technology to human behavior and psychology.
-                I believe in the promise of the human spirit, kindness, hard work, love and compassion.`,
+                Despite working as a web developer professionally I still consider programming mostly a hobby.
+                As such I built this website to have a platform that is truly my own, but most of all for fun.`,
             links: [
                 {
                     url: 'https://github.com/dusnm',
@@ -46,26 +45,11 @@ module.exports = {
                     url: 'mailto:dusan@dusanmitrovic.xyz',
                     icon: 'fas fa-envelope',
                     text: 'Email'
-                }
-            ]
-        },
-        {
-            title: 'My GNU/Linux setup',
-            content: `Like I mentioned, I'm an avid fan of GNU/Linux.
-                      I use it for software development and as my main daily operating system.
-                      I'm a vocal Free Software advocate.
-                      I believe that software should be free to obtain and modify as one sees fit.
-                      You can get my configuration by checking out this link:`,
-            image: {
-                alt: 'My GNU/Linux setup',
-                url: '/static/images/linux.png',
-                rounded: false
-            },
-            links: [
+                },
                 {
-                    url: 'https://github.com/dusnm/dotfiles',
-                    icon: 'fab fa-github',
-                    text: 'Get dotfiles'
+                    url: '/static/dusancv.pdf',
+                    icon: 'fas fa-file-pdf',
+                    text: 'Résumé'
                 }
             ]
         },

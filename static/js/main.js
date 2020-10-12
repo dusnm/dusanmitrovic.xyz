@@ -4,16 +4,12 @@
  *
  * Main JavaScript file
  */
-window.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     if ('function' === typeof navbarSlider) {
         navbarSlider();
     }
 
     if ('function' === typeof determineActiveNavigation) {
         determineActiveNavigation();
-    }
-
-    if ('function' === typeof fetchRecentGithubRepositories) {
-        fetchRecentGithubRepositories();
     }
 });
