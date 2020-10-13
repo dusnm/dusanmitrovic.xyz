@@ -1,4 +1,5 @@
 node_modules/
+.idea/
 .env
 static/fontawesome-free
 static/dusancv.pdf
