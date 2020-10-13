@@ -47,6 +47,12 @@ module.exports = {
                     text: 'Email'
                 },
                 {
+                    url: '/rss',
+                    icon: 'fas fa-rss',
+                    text: 'RSS'
+                }
+                ,
+                {
                     url: '/static/dusancv.pdf',
                     icon: 'fas fa-file-pdf',
                     text: 'Résumé'

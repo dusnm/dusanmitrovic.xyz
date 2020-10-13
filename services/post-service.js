@@ -21,6 +21,27 @@ class PostService {
     }
 
     /**
+     * Return all posts
+     *
+     * @returns {Promise<Post[]>}
+     */
+    static async getAll() {
+        return Post.query()
+            .select(
+                'posts.id',
+                'posts.title',
+                'posts.description',
+                'posts.content',
+                'posts.created_at',
+                'user.first_name',
+                'user.last_name',
+                'user.email'
+            )
+            .leftJoinRelated('user')
+            .orderBy('posts.created_at', 'DESC');
+    }
+
+    /**
      * @typedef {Object} PaginatedPosts
      * @property {Array<Post>} posts
      * @property {number} totalPages

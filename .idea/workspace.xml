@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="08e40675-ccfb-4558-b7a9-247c70b08f06" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/utilities/get-app-uri.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/post-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/post-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/view-data/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/view-data/home.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1ipkpKhOpdoxXcaB19RoGvxE83h" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app.js" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Website" type="NodeJSConfigurationType" node-parameters="/usr/bin/nodemon" path-to-js-file="app.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="08e40675-ccfb-4558-b7a9-247c70b08f06" name="Default Changelist" comment="" />
+      <created>1602612102984</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602612102984</updated>
+      <workItem from="1602612104086" duration="3564000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2338" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602612481685">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2338" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1920.1055/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602612481685" />
+    <state x="2663" y="248" width="424" height="590" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1602612312481">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2663" y="248" width="424" height="590" key="#com.intellij.ide.macro.MacrosDialog/0.25.1920.1055/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602612312481" />
+    <state x="2604" y="298" key="FileChooserDialogImpl" timestamp="1602612299645">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2604" y="298" key="FileChooserDialogImpl/0.25.1920.1055/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602612299645" />
+    <state width="1872" height="284" key="GridCell.Tab.0.bottom" timestamp="1602612482778">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1872" height="284" key="GridCell.Tab.0.bottom/0.25.1920.1055/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602612482778" />
+    <state width="1872" height="284" key="GridCell.Tab.0.center" timestamp="1602612482777">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1872" height="284" key="GridCell.Tab.0.center/0.25.1920.1055/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602612482777" />
+    <state width="1872" height="284" key="GridCell.Tab.0.left" timestamp="1602612482777">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1872" height="284" key="GridCell.Tab.0.left/0.25.1920.1055/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602612482777" />
+    <state width="1872" height="284" key="GridCell.Tab.0.right" timestamp="1602612482777">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1872" height="284" key="GridCell.Tab.0.right/0.25.1920.1055/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602612482777" />
+    <state x="2399" y="175" width="962" height="736" key="SettingsEditor" timestamp="1602612264305">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2399" y="175" width="962" height="736" key="SettingsEditor/0.25.1920.1055/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602612264305" />
+    <state x="2408" y="203" width="934" height="679" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602615513518">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2408" y="203" width="934" height="679" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.25.1920.1055/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602615513518" />
+    <state x="2519" y="239" width="719" height="678" key="search.everywhere.popup" timestamp="1602614543420">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2519" y="239" width="719" height="678" key="search.everywhere.popup/0.25.1920.1055/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602614543420" />
+  </component>
+</project>

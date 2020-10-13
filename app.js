@@ -31,6 +31,7 @@ const home = require('./routes/home');
 const login = require('./routes/login');
 const blog = require('./routes/blog');
 const contact = require('./routes/contact');
+const rss = require('./routes/rss');
 
 const app = express();
 
@@ -72,6 +73,7 @@ app.use('/', home);
 app.use('/admin', login);
 app.use('/blog', blog);
 app.use('/contact', contact);
+app.use('/rss', rss);
 
 // 404 route, this must always be the last route mounted
 app.get(
