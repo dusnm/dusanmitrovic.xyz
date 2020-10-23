@@ -28,7 +28,7 @@ body {
 }
 
 body {
-    background-color: var(--primary-bg);
+    background-color: var(--secondary-bg);
     z-index: 1;
 }
 

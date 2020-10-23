@@ -12,15 +12,19 @@
 .form-input {
     padding: 1em 2em;
     margin-bottom: 1em;
-    background: var(--primary-bg);
+    background: white;
     border-style: none;
     font-size: 1rem;
+    box-shadow: 0 0 5px #ccc;
+    color: black;
 }
 
 .form-textarea {
     resize: none;
     border-style: none;
-    background-color: var(--primary-bg);
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 5px #ccc;
     padding: 1em;
     font-size: 1rem;
     margin-bottom: 1em;
@@ -30,7 +34,8 @@
     width: 20%;
     padding: 1em 2em;
     border-style: none;
-    background: var(--primary-bg);
+    background-color: black;
+    color: white;
     cursor: pointer;
 }
 

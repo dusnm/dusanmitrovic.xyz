@@ -4,7 +4,8 @@
     justify-content: space-around;
     background: var(--secondary-bg);
     padding: 1em 2em;
-    margin: 1em 0;
+    margin: 1em;
+    box-shadow: 0 0 17px #ccc;
 }
 
 .card-image-container {
@@ -47,7 +48,7 @@
         width: 100%;
     }
 
-    .card-image: {
+    .card-image {
         width: 100%;
     }
 
@@ -57,7 +58,7 @@
         text-align: center;
     }
 
-    .card-text: {
+    .card-text {
         width: 100%;
         margin-top: 1em;
     }

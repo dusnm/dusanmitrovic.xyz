@@ -15,6 +15,9 @@ const router = express.Router();
 router.get('/', (req, res) => {
     return res.render('contact', {
         title: 'Contact',
+        css: [
+            '/static/css/contact.css',
+        ],
         form: {
             id: 'contact-form',
             action: '/contact',
@@ -35,6 +38,9 @@ router.post('/', validations.contact, async (req, res) => {
 
         return res.status(422).render('contact', {
             title: 'Contact',
+            css: [
+                '/static/css/contact.css',
+            ],
             form: {
                 id: 'contact-form',
                 action: '/contact',
@@ -72,6 +78,9 @@ router.post('/', validations.contact, async (req, res) => {
 
     return res.render('contact', {
         title: 'Contact',
+        css: [
+            '/static/css/contact.css',
+        ],
         form: {
             id: 'contact-form',
             action: '/contact',

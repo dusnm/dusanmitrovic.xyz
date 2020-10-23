@@ -1,0 +1,9 @@
+#contact-page {
+    width: 700px;
+}
+
+@media screen and (max-width: 700px) {
+    #contact-page {
+        width: 100%;
+    }
+}

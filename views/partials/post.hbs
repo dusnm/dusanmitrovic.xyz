@@ -1,13 +1,11 @@
 <article class="blog-post">
     <div class="blog-post-heading">
-        <h1 class="blog-post-title">{{ title }}</h1>
-        <small clas="blog-post-date">{{created_at}}</small>
+        <h1 class="blog-post-title">
+            <a class="blog-post-link" href="/blog/post/{{id}}">{{ title }}</a>
+        </h1>
+        <small class="blog-post-date">{{created_at}}</small>
     </div>
     <div class="blog-post-body">
         <p class="blog-post-description">{{ description }}</p>
-    </div>
-    <div class="blog-post-footer">
-        <a class="blog-post-link" href="/blog/post/{{ id }}">Read</a>
-        <small class="blog-post-author">{{ first_name }} {{ last_name }}</small>
     </div>
 </article>

@@ -8,14 +8,24 @@
     padding: 0.5em;
     margin-bottom: 1em;
     text-decoration: none;
-    color: var(--secondary-fg);
-    background: var(--secondary-bg);
+    color: white;
+    background: black;
 }
 
 .blog-post {
     padding: 1em;
     margin: 1em 0;
     background: var(--secondary-bg);
+    box-shadow: 0 0 17px #ccc;
+}
+
+#blog-page {
+    width: 700px;
+}
+
+#blog-post {
+    width: 700px;
+    box-shadow: 0 0 17px #ccc;
 }
 
 .blog-post-heading {
@@ -25,7 +35,7 @@
 }
 
 .blog-post-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .blog-post-date {
@@ -40,22 +50,13 @@
     margin-top: 0.5em;
 }
 
-.blog-post-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .blog-post-author {
     font-size: 0.9rem;
 }
 
 .blog-post-link {
-    display: inline-block;
-    background: var(--primary-bg);
-    color: var(--secondary-fg);
-    padding: 0.5em 1em;
-    text-decoration: none;
+    color: var(--active-color);
+    text-decoration-color: var(--active-color);
 }
 
 .blog-navigation {
@@ -65,8 +66,8 @@
 
 .blog-navigation-link {
     padding: 0.5em 1em;
-    background: var(--secondary-bg);
-    color: var(--secondary-fg);
+    background: black;
+    color: white;
     text-decoration: none;
 }
 
@@ -82,7 +83,7 @@
 }
 
 .post-content p {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     margin: 0.5em 0;
     text-align: justify;
 }
@@ -100,15 +101,16 @@ ol {
 .post-actions {
     display: flex;
     align-items: center;
-    margin-top: 1em;
+    justify-content: center;
+    margin: 1em;
 }
 
 .post-action-edit {
     margin-right: 1em;
     padding: 0.5em 1em;
     text-decoration: none;
-    background: var(--secondary-bg);
-    color: var(--secondary-fg);
+    background: var(--secondary-fg);
+    color: var(--secondary-bg);
 }
 
 .post-action-delete {
@@ -124,19 +126,23 @@ ol {
         width: 100%;
     }
 
+    .blog-post {
+        margin: 1em;
+    }
+
+    .blog-post-new-link {
+        margin: 1em;
+    }
+
+    .blog-navigation {
+        margin: 0 1em;
+    }
+
     .blog-post-title {
         font-size: 1.2rem;
     }
 
     .blog-post-description {
-        font-size: 1rem;
-    }
-
-    .post-content h1 {
-        font-size: 1.5rem;
-    }
-
-    .post-content p {
         font-size: 1rem;
     }
 
@@ -147,4 +153,13 @@ ol {
     .post-content pre {
         overflow-x: auto;
     }
+
+    #blog-post {
+        width: 90%;
+    }
+
+    #blog-page {
+        width: 90%;
+    }
 }
+
