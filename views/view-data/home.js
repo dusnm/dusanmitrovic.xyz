@@ -31,12 +31,6 @@ module.exports = {
                     text: 'Github'
                 },
                 {
-                    url:
-                        'https://www.linkedin.com/in/du%C5%A1an-mitrovi%C4%87-763b62171/',
-                    icon: 'fab fa-linkedin',
-                    text: 'LinkedIn'
-                },
-                {
                     url: 'https://mastodon.technology/@duxontraitor',
                     icon: 'fab fa-mastodon',
                     text: 'Mastodon'

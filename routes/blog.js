@@ -9,7 +9,7 @@ const PostService = require('../services/post-service');
 const authorizationMiddleware = require('../middleware/auth');
 const markdown2Html = require('../utilities/markdown-2-html');
 const validations = require('../validations/post-validations');
-const { validationResult } = require('express-validator');
+const {validationResult} = require('express-validator');
 const capitalize = require('../utilities/capitalize');
 const moment = require('moment');
 const router = express.Router();
@@ -54,6 +54,7 @@ router.get('/post/:id', async (req, res) => {
             js: ['/static/js/prism.js'],
             id: post.id,
             content: markdown2Html(post.content),
+            created_at: moment(post.created_at).format('MMMM Do YYYY'),
             openGraph: {
                 title: post.title,
                 type: 'article',
@@ -109,7 +110,7 @@ router.get('/', validations.getPaginatedPosts, async (req, res) => {
         const paginatedPosts = await PostService.getPaginated(page, perPage);
 
         for (post of paginatedPosts.posts) {
-            post.created_at = moment(post.created_at).format('DD-MM-YYYY');
+            post.created_at = moment(post.created_at, 'YYYYMMDD').fromNow();
         }
 
         return res.render('blogPage', {
@@ -134,7 +135,7 @@ router.post(
     async (req, res) => {
         try {
             const errors = validationResult(req);
-            const { title, description, content } = req.body;
+            const {title, description, content} = req.body;
             const user_id = req.session.user.id;
 
             if (!errors.isEmpty()) {
@@ -176,7 +177,7 @@ router.put(
     async (req, res) => {
         try {
             const errors = validationResult(req);
-            const { title, description, content } = req.body;
+            const {title, description, content} = req.body;
             const id = req.params.id;
             const user_id = req.session.user.id;
 
@@ -219,7 +220,8 @@ router.delete('/post/:id', authorizationMiddleware, async (req, res) => {
 
         await PostService.delete(id, user_id);
 
-        return res.redirect('/blog'); } catch (error) {
+        return res.redirect('/blog');
+    } catch (error) {
         console.error(error);
         return res.end();
     }

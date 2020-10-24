@@ -16,7 +16,7 @@ class PostService {
      */
     static async getById(id) {
         return Post.query()
-            .select('id', 'title', 'description', 'content')
+            .select('id', 'title', 'description', 'content', 'created_at')
             .findById(id);
     }
 

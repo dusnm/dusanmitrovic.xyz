@@ -88,6 +88,11 @@
     text-align: justify;
 }
 
+.post-content a {
+    color: var(--active-color);
+    text-decoration-color: var(--active-color);
+}
+
 .post-content ul,
 ol {
     list-style-position: inside;

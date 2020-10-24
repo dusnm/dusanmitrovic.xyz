@@ -1,6 +1,7 @@
 <section id="blog-post" class="container">
     <article class="post-content">
         <h1>{{ title }}</h1>
+        <h4>{{ created_at }} on <a href="/blog">Dušan's blog</a></h4>
         {{{ content }}}
     </article>
     {{#if session.user}}
